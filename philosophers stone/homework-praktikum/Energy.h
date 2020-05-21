@@ -1,7 +1,6 @@
 #ifndef ENERGY_H
 #define ENERGY_H
 
-
 #include "Water.h"
 #include "Air.h"
 
@@ -10,7 +9,17 @@ class Energy :
 	public Water, public Air
 {
 public:
-	Energy(int &col1, int &col2);
+	Energy();
+	Energy(int &col);
+
+	void increaseCol(int& n);
+	void decreaseCol(int& n);
+	Element* clone()const;
+
+	std::vector<std::string> getIteractions()const;
+
+
+	void print()const;
 
 };
 

@@ -1,0 +1,5 @@
+Air+Air=Spirit
+/Fire
+Metal+Stone=Gold
+Fire+Earth=Metal
+Fire+Water+Earth=Gold

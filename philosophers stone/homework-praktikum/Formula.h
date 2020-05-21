@@ -6,10 +6,16 @@ class Formula
 {
 private:
 	Equation* equation;
+	bool isDivided;
+	std::string result;
 
 public:
 	Formula();
-	Formula(const Equation* equation);
+	Formula(std::string dividedElem);
+	Formula(Equation* equation, const std::string& result);
+
+	void print()const;
+
 };
 #endif // !FORMULA_H
 

@@ -2,30 +2,28 @@
 #define EQUATION_H
 
 #include "Element.h"
+#include "Air.h"
+#include "Earth.h"
+#include "Energy.h"
+#include "Fire.h"
+#include "Gold.h"
+#include "Metal.h"
+#include "PhilosophersStone.h"
+#include "Spirit.h"
+#include "Stone.h"
+#include "Water.h"
 #include <vector>
-
-struct ElementDivision
-{
-	Element el1;
-	Element el2;
-
-	void print()const;
-};
 
 class Equation
 {
 private:
-	Equation* eq;
-	Element* el;
+	std::vector<Element*> elements;
+	int size;
 
-	bool isElement()const;
 public:
-	Equation();
-	Equation(Equation* eq, Element* el);
+	Equation(const std::vector<std::string> elements, int size);
 
-	Element* elemId(const Element* el);
-	ElementDivision elemDiv(const Element* el);
-
+	void print()const;
 };
 #endif // !EQUATION_H
 

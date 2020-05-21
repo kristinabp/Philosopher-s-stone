@@ -1,9 +1,10 @@
 #include "Element.h"
 
-Element::Element():col(0)
+Element::Element():col(0), iteractions(std::vector<std::string>())
 {
 }
 
-Element::Element(int & col):col(col)
+Element::Element(const int & col):col(col)
 {
+	this->iteractions = std::vector<std::string>();
 }

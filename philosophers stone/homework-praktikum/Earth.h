@@ -2,19 +2,22 @@
 #define EARTH_H
 
 #include "Element.h"
-#include <vector>
-#include <string>
 
 class Earth:
-	public Element
+	public virtual Element
 {
-protected:
-	std::vector<std::string> iteractions;
 public:
 	Earth();
 	Earth(int & col);
 
-	int getCol()const;
+	void decreaseCol(int& n);
+	void increaseCol(int& n);
+	int getCol();
+	Element* clone()const;
+
+	std::vector<std::string> getIteractions()const;
+
+	void print()const;
 };
 #endif // !EARTH_H
 

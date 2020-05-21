@@ -1,22 +1,25 @@
 #ifndef FIRE_H
 #define FIRE_H
 #include "Element.h"
-#include <vector>
-#include <string>
 
 class Fire:
-	public Element
+	public virtual Element
 {
 protected:
-	std::vector<std::string> iteractions;
 
 public:
 	Fire();
-	Fire(int& col);
+	Fire(const int& col);
+
+	void decreaseCol(int& n);
+	void increaseCol(int& n);
+	Element* clone()const;
+
+	int getCol();
+	std::vector<std::string> getIteractions()const;
 
 
-	int getCol()const;
-
+	void print()const;
 };
 #endif // !FIRE_H
 

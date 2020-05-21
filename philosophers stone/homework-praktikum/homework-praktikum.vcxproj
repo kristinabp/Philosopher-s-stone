@@ -118,6 +118,7 @@
     <ClInclude Include="Air.h" />
     <ClInclude Include="AlchemicalBook.h" />
     <ClInclude Include="Alchemist.h" />
+    <ClInclude Include="DividedElement.h" />
     <ClInclude Include="Earth.h" />
     <ClInclude Include="Element.h" />
     <ClInclude Include="Energy.h" />
@@ -134,11 +135,13 @@
   <ItemGroup>
     <ClCompile Include="Air.cpp" />
     <ClCompile Include="AlchemicalBook.cpp" />
+    <ClCompile Include="DividedElement.cpp" />
     <ClCompile Include="Earth.cpp" />
     <ClCompile Include="Element.cpp" />
     <ClCompile Include="Energy.cpp" />
     <ClCompile Include="Equation.cpp" />
     <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Formula.cpp" />
     <ClCompile Include="Gold.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Metal.cpp" />

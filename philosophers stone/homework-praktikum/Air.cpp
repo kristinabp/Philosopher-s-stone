@@ -16,7 +16,28 @@ Air::Air(int & col):Element(col)
 	iteractions.push_back("earth");
 }
 
-int Air::getCol() const
+void Air::decreaseCol(int & n)
 {
-	return this->col;
+	this->col -= n;
 }
+
+void Air::increaseCol(int & n)
+{
+	this->col += n;
+}
+
+Element * Air::clone() const
+{
+	return new Air(*this);
+}
+
+std::vector<std::string> Air::getIteractions() const
+{
+	return this->iteractions;
+}
+
+void Air::print() const
+{
+	std::cout << "Air";
+}
+

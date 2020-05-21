@@ -2,20 +2,25 @@
 #define WATER_H
 
 #include "Element.h"
-#include <vector>
-#include <string>
 
 class Water:
-	public Element
+	public virtual Element
 {
 protected:
-	std::vector<std::string> iteractions;
 
 public:
 	Water();
 	Water(int& col);
 
-	int getCol()const;
+	void increaseCol(int& n);
+	void decreaseCol(int& n);
+
+	Element* clone()const;
+
+	std::vector<std::string> getIteractions()const;
+
+
+	void print()const;
 
 };
 #endif // !WATER_H
