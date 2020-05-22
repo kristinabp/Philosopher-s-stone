@@ -2,16 +2,16 @@
 
 Earth::Earth() : Element()
 {
-	iteractions.push_back("air");
-	iteractions.push_back("water");
-	iteractions.push_back("fire");
+	iteractions.push_back("Air");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 Earth::Earth(int & col): Element(col)
 {
-	iteractions.push_back("air");
-	iteractions.push_back("water");
-	iteractions.push_back("fire");
+	iteractions.push_back("Air");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Earth::decreaseCol(int & n)
@@ -37,6 +37,11 @@ Element * Earth::clone() const
 std::vector<std::string> Earth::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Earth::getName() const
+{
+	return "Earth";
 }
 
 void Earth::print() const

@@ -1,5 +1,8 @@
 Air+Air=Spirit
-/Fire
 Metal+Stone=Gold
 Fire+Earth=Metal
 Fire+Water+Earth=Gold
+Water+Earth=Stone
+Spirit+Air=Energy
+/Fire
+Energy+Earth=Stone

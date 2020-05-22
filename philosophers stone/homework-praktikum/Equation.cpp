@@ -58,6 +58,30 @@ Equation::Equation(const std::vector<std::string> elements, int size): size(size
 	}
 }
 
+bool Equation::validEquation(const std::vector<std::string> elements) const
+{
+	Air air;
+	Earth earth;
+	Energy energy;
+	Fire fire;
+	Gold gold;
+	Metal metal;
+	PhilosophersStone phStone;
+	Spirit spirit;
+	Stone stone;
+	Water water;
+
+	for (size_t i = 0; i < elements.size(); i++)
+	{
+		if (elements[i] == "Air")
+		{
+
+		}
+	}
+
+	return true;
+}
+
 void Equation::print() const
 {
 	for (size_t i = 0; i < this->size-1; i++)

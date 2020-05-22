@@ -3,19 +3,19 @@
 Metal::Metal()
 {
 	this->col = 0;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 Metal::Metal(int & col) 
 {
 	this->col = col;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Metal::increaseCol(int & n)
@@ -36,6 +36,11 @@ Element * Metal::clone() const
 std::vector<std::string> Metal::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Metal::getName() const
+{
+	return "Metal";
 }
 
 void Metal::print() const

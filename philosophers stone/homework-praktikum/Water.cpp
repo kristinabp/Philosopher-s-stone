@@ -2,14 +2,14 @@
 
 Water::Water():Element()
 {
-	iteractions.push_back("air");
-	iteractions.push_back("fire");
+	iteractions.push_back("Air");
+	iteractions.push_back("Fire");
 }
 
 Water::Water(int & col):Element(col)
 {
-	iteractions.push_back("air");
-	iteractions.push_back("fire");
+	iteractions.push_back("Air");
+	iteractions.push_back("Fire");
 }
 
 void Water::increaseCol(int & n)
@@ -30,6 +30,11 @@ Element * Water::clone() const
 std::vector<std::string> Water::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Water::getName() const
+{
+	return "Water";
 }
 
 void Water::print() const

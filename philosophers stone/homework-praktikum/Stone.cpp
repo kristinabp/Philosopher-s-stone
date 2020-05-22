@@ -3,19 +3,19 @@
 Stone::Stone()
 {
 	this->col = 0;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 Stone::Stone(int & col)
 {
 	this->col = col;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Stone::increaseCol(int & n)
@@ -36,6 +36,11 @@ Element * Stone::clone() const
 std::vector<std::string> Stone::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Stone::getName() const
+{
+	return "Stone";
 }
 
 void Stone::print() const

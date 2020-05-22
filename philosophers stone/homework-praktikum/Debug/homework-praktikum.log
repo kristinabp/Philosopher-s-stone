@@ -1,23 +1,2 @@
-﻿  Air.cpp
-  AlchemicalBook.cpp
-c:\users\home pc\desktop\github-repositories\philosopher-s-stone\philosophers stone\homework-praktikum\alchemicalbook.cpp(21): error C2039: 'getIteractions': is not a member of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\home pc\desktop\github-repositories\philosopher-s-stone\philosophers stone\homework-praktikum\alchemicalbook.cpp(22): error C2059: syntax error: '}'
-c:\users\home pc\desktop\github-repositories\philosopher-s-stone\philosophers stone\homework-praktikum\alchemicalbook.cpp(50): warning C4018: '<': signed/unsigned mismatch
-  DividedElement.cpp
-  Earth.cpp
-  Element.cpp
-  Energy.cpp
-  Equation.cpp
-c:\users\home pc\desktop\github-repositories\philosopher-s-stone\philosophers stone\homework-praktikum\equation.cpp(16): warning C4018: '<': signed/unsigned mismatch
-c:\users\home pc\desktop\github-repositories\philosopher-s-stone\philosophers stone\homework-praktikum\equation.cpp(63): warning C4018: '<': signed/unsigned mismatch
-  Fire.cpp
-  Formula.cpp
-  Gold.cpp
-  Metal.cpp
-  PhilosophersStone.cpp
-  Spirit.cpp
-  Stone.cpp
-  Water.cpp
-  main.cpp
-  Generating Code...
+﻿  main.cpp
+  homework-praktikum.vcxproj -> C:\Users\Home PC\Desktop\github-repositories\Philosopher-s-stone\philosophers stone\Debug\homework-praktikum.exe

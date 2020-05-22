@@ -20,6 +20,7 @@ public:
 	virtual Element* clone()const = 0;
 
 	virtual std::vector<std::string> getIteractions()const = 0;
+	virtual std::string getName()const = 0;
 
 	virtual void print()const = 0;
 };

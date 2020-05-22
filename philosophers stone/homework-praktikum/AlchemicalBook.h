@@ -4,11 +4,14 @@
 #include "Formula.h"
 #include <vector>
 #include <fstream>
+#include <iostream>
 
 class AlchemicalBook
 {
 private:
 	std::vector<Formula*> formulas;
+	bool checkIteraction(std::vector<std::string> vector, std::string str);
+	void createVectorOfElements(std::vector<std::string> elements);
 
 public:
 	AlchemicalBook();

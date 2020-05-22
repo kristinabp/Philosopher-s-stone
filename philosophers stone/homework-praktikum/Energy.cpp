@@ -3,10 +3,10 @@
 Energy::Energy(int & col)
 {
 	this->col = col;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Energy::increaseCol(int & n)
@@ -29,6 +29,11 @@ std::vector<std::string> Energy::getIteractions() const
 	return this->iteractions;
 }
 
+std::string Energy::getName() const
+{
+	return "Energy";
+}
+
 void Energy::print() const
 {
 	std::cout << "Energy" ;
@@ -37,8 +42,8 @@ void Energy::print() const
 Energy::Energy()
 {
 	this->col = 0;
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
-	iteractions.push_back("air");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }

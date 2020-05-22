@@ -2,18 +2,18 @@
 
 Air::Air():Element()
 {
-	iteractions.push_back("air");
-	iteractions.push_back("water");
-	iteractions.push_back("fire");
-	iteractions.push_back("earth");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 Air::Air(int & col):Element(col)
 {
-	iteractions.push_back("air");
-	iteractions.push_back("water");
-	iteractions.push_back("fire");
-	iteractions.push_back("earth");
+	iteractions.push_back("Air");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Air::decreaseCol(int & n)
@@ -34,6 +34,11 @@ Element * Air::clone() const
 std::vector<std::string> Air::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Air::getName() const
+{
+	return "Air";
 }
 
 void Air::print() const

@@ -17,6 +17,7 @@ public:
 
 	int getCol();
 	std::vector<std::string> getIteractions()const;
+	std::string getName()const;
 
 
 	void print()const;

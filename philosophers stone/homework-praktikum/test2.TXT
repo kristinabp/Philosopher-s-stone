@@ -1,0 +1,6 @@
+Earth+Energy=Metal
+Fire+Spirit=Gold
+Metal+Water=Spirit
+Earth+Fire=Metal
+Earth+Water=Gold
+Fire+Air=Spirit

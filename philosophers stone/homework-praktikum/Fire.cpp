@@ -2,16 +2,16 @@
 
 Fire::Fire(): Element()
 {
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 Fire::Fire(const int & col):Element(col)
 {
-	iteractions.push_back("fire");
-	iteractions.push_back("water");
-	iteractions.push_back("earth");
+	iteractions.push_back("Earth");
+	iteractions.push_back("Fire");
+	iteractions.push_back("Water");
 }
 
 void Fire::decreaseCol(int & n)
@@ -37,6 +37,11 @@ int Fire::getCol()
 std::vector<std::string> Fire::getIteractions() const
 {
 	return this->iteractions;
+}
+
+std::string Fire::getName() const
+{
+	return "Fire";
 }
 
 void Fire::print() const

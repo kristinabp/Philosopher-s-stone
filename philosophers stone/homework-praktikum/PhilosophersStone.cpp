@@ -32,6 +32,11 @@ std::vector<std::string> PhilosophersStone::getIteractions() const
 	return this->iteractions;
 }
 
+std::string PhilosophersStone::getName() const
+{
+	return "Philosopher's Name";
+}
+
 void PhilosophersStone::print() const
 {
 	std::cout << "Philosophers's stone";
