@@ -1,6 +1,9 @@
-Earth+Energy=Metal
-Fire+Spirit=Gold
-Metal+Water=Spirit
-Earth+Fire=Metal
-Earth+Water=Gold
-Fire+Air=Spirit
+Air+Air=Spirit
+Metal+Stone=Gold
+Fire+Water+Earth=Gold
+Water+Earth=Stone
+Spirit+Air=Energy
+Water+Air=Energy
+Gold+Spirit+Energy=Philosopher's Stone
+/Fire
+Energy+Earth=Stone

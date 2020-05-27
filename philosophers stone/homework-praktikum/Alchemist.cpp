@@ -3,6 +3,7 @@
 std::vector<Element*> Alchemist::expandElem(Element* el)
 {
 	std::vector<Element*> vec;
+	bool findFormula = false;
 
 	for (size_t i = 0; i < book.getFormulas().size(); i++)
 	{
@@ -11,32 +12,42 @@ std::vector<Element*> Alchemist::expandElem(Element* el)
 			if (book.getFormulas()[i]->getResult()->getName() == el->getName())
 			{
 				vec = book.getFormulas()[i]->getEquation()->getElements();
+				findFormula = true;
+				break;
 			}
 		}
 	}
 
-	if (allBase(vec))
+	if (findFormula)
 	{
-		return vec;
+		if (allBase(vec))
+		{
+			return vec;
+		}
+		else
+		{
+			std::vector<Element*> neww;
+			std::vector<Element*> curr;
+			for (size_t i = 0; i < vec.size(); i++)
+			{
+				if (vec[i]->isBase())
+				{
+					neww.push_back(vec[i]);
+				}
+				else
+				{
+					curr = expandElem(vec[i]);
+					neww.insert(neww.end(), curr.begin(), curr.end());
+				}
+			}
+
+			return neww;
+		}
 	}
 	else
 	{
-		std::vector<Element*> neww;
-		std::vector<Element*> curr;
-		for (size_t i = 0; i < vec.size();i++)
-		{
-			if (vec[i]->isBase())
-			{
-				neww.push_back(vec[i]);
-			}
-			else
-			{
-				curr = expandElem(vec[i]);
-				neww.insert(neww.end(), curr.begin(), curr.end());
-			}
-		}
-
-		return neww;
+		vec.push_back(new Air(-10)); //error case just to know that there is an element that can't be created
+		return vec;
 	}
 }
 
@@ -54,24 +65,6 @@ bool Alchemist::allBase(std::vector<Element*> el) const
 		}
 	}
 	return true;
-}
-
-int Alchemist::inVector(std::vector<Element*> elements, Element * el)
-{
-	bool isFound = false;
-	int index = 0;
-	for (auto elem = elements.cbegin(); !isFound && elem != elements.cend(); elem++) {
-		isFound = (*elem)->getName() == el->getName();
-		index++;
-	}
-	if (isFound)
-	{
-		return index;
-	}
-	else
-	{
-		return 0;
-	}
 }
 
 bool Alchemist::createPhilosophersStone()
@@ -140,12 +133,20 @@ bool Alchemist::createPhilosophersStone()
 			for (size_t j = 0; j < neededElementsForPhilosophersStone[i].size(); j++)
 			{
 				cur = expandElem(neededElementsForPhilosophersStone[i][j]);
+				if (cur.empty())
+				{
+					return false;
+				}
 				allElementsNeeded.insert(allElementsNeeded.end(), cur.begin(), cur.end());
 			}
 		}
 
 		for (size_t i = 0; i < allElementsNeeded.size(); i++)
 		{
+			if (allElementsNeeded[i]->getCol() == -10) //error case 
+			{
+				return false;
+			}
 			for (size_t j = 0; j < elements.size(); j++)
 			{
 				if (elements[j]->getName() == allElementsNeeded[i]->getName())
@@ -193,6 +194,4 @@ void Alchemist::print() const
 		elements[i]->print();
 		std::cout << "\n";
 	}
-	std::cout << "-------------------\n";
-	std::cout << "Philosopher's stone created: ";
 }

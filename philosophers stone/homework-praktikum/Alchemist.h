@@ -14,7 +14,6 @@ private:
 
 	std::vector<Element*> expandElem(Element* el);
 	bool allBase(std::vector<Element*> el)const;
-	int inVector(std::vector<Element*> elements, Element* el);
 	
 public:
 	Alchemist();

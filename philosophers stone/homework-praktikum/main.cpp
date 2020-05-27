@@ -17,6 +17,9 @@ int main()
 	alchemist.addElement(new Air(10));
 
 	alchemist.print();
+
+	std::cout << "-------------------\n";
+	std::cout << "Philosopher's stone created: ";
 	if (alchemist.createPhilosophersStone())
 	{
 		std::cout << "Yes\n";
