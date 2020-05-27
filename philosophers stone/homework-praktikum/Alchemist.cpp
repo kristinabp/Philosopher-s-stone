@@ -132,12 +132,15 @@ bool Alchemist::createPhilosophersStone()
 		{
 			for (size_t j = 0; j < neededElementsForPhilosophersStone[i].size(); j++)
 			{
-				cur = expandElem(neededElementsForPhilosophersStone[i][j]);
-				if (cur.empty())
+				if (neededElementsForPhilosophersStone[i][j]->isBase())
 				{
-					return false;
+					allElementsNeeded.push_back(neededElementsForPhilosophersStone[i][j]);
 				}
-				allElementsNeeded.insert(allElementsNeeded.end(), cur.begin(), cur.end());
+				else
+				{
+					cur = expandElem(neededElementsForPhilosophersStone[i][j]);
+					allElementsNeeded.insert(allElementsNeeded.end(), cur.begin(), cur.end());
+				}
 			}
 		}
 
