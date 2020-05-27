@@ -4,20 +4,20 @@
 
 PhilosophersStone::PhilosophersStone()
 {
-	this->col = 0;
+	this->col = 1;
 }
 
-PhilosophersStone::PhilosophersStone(int & col)
+PhilosophersStone::PhilosophersStone(int col)
 {
 	this->col = col;
 }
 
-void PhilosophersStone::increaseCol(int & n)
+void PhilosophersStone::increaseCol(int n)
 {
 	this->col += n;
 }
 
-void PhilosophersStone::decreaseCol(int & n)
+void PhilosophersStone::decreaseCol(int n)
 {
 	this->col -= n;
 }
@@ -27,6 +27,11 @@ Element * PhilosophersStone::clone() const
 	return new PhilosophersStone(*this);
 }
 
+int PhilosophersStone::getCol() const
+{
+	return this->col;
+}
+
 std::vector<std::string> PhilosophersStone::getIteractions() const
 {
 	return this->iteractions;
@@ -34,12 +39,21 @@ std::vector<std::string> PhilosophersStone::getIteractions() const
 
 std::string PhilosophersStone::getName() const
 {
-	return "Philosopher's Name";
+	return "Philosopher's Stone";
+}
+
+bool PhilosophersStone::isBase() const
+{
+	return false;
 }
 
 void PhilosophersStone::print() const
 {
-	std::cout << "Philosophers's stone";
+	if (col > 1)
+	{
+		std::cout << col << " ";
+	}
+	std::cout << "Philosopher's Stone";
 }
 
 

@@ -54,6 +54,16 @@ DividedElement::DividedElement(const std::string elem)
 	}
 }
 
+Element * DividedElement::getEl1() const
+{
+	return this->el1;
+}
+
+Element * DividedElement::getEl2() const
+{
+	return this->el2;
+}
+
 void DividedElement::print() const
 {
 	el1->print();

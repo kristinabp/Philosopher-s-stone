@@ -21,6 +21,8 @@ private:
 public:
 	DividedElement(const std::string elem);
 
+	Element* getEl1()const;
+	Element* getEl2()const;
 	void print()const;
 
 };

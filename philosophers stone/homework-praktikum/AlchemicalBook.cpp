@@ -233,6 +233,11 @@ void AlchemicalBook::read(const std::string fileName)
 	}
 }
 
+std::vector<Formula*> AlchemicalBook::getFormulas() const
+{
+	return this->formulas;
+}
+
 void AlchemicalBook::print() const
 {
 	for (size_t i = 0; i < formulas.size(); i++)

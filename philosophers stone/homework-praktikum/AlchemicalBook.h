@@ -11,7 +11,6 @@ class AlchemicalBook
 private:
 	std::vector<Formula*> formulas;
 	bool checkIteraction(std::vector<std::string> vector, std::string str);
-	void createVectorOfElements(std::vector<std::string> elements);
 
 public:
 	AlchemicalBook();
@@ -19,6 +18,8 @@ public:
 
 	void addFormula(std::vector<std::string> elements, std::string result);
 	void read(const std::string fileName);
+
+	std::vector<Formula*> getFormulas()const;
 
 	void print()const;
 };

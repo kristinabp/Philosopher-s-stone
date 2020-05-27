@@ -13,7 +13,6 @@
 #include "Stone.h"
 #include "Water.h"
 #include <vector>
-#include <utility>
 
 class Equation
 {
@@ -24,7 +23,8 @@ private:
 public:
 	Equation(const std::vector<std::string> elements, int size);
 
-	bool validEquation(const std::vector<std::string> elements)const;
+	std::vector<Element*> getElements()const;
+
 	void print()const;
 };
 #endif // !EQUATION_H

@@ -13,14 +13,16 @@ protected:
 
 public:
 	Element();
-	Element(const int& col);
+	Element(int col);
 
-	virtual void increaseCol(int& n) = 0;
-	virtual void decreaseCol(int& n) = 0;
+	virtual void increaseCol(int n) = 0;
+	virtual void decreaseCol(int n) = 0;
 	virtual Element* clone()const = 0;
 
+	virtual int getCol()const = 0;
 	virtual std::vector<std::string> getIteractions()const = 0;
 	virtual std::string getName()const = 0;
+	virtual bool isBase()const = 0;
 
 	virtual void print()const = 0;
 };

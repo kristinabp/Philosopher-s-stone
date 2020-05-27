@@ -9,7 +9,7 @@ Metal::Metal()
 	iteractions.push_back("Water");
 }
 
-Metal::Metal(int & col) 
+Metal::Metal(int col) 
 {
 	this->col = col;
 	iteractions.push_back("Air");
@@ -18,12 +18,12 @@ Metal::Metal(int & col)
 	iteractions.push_back("Water");
 }
 
-void Metal::increaseCol(int & n)
+void Metal::increaseCol(int n)
 {
 	this->col += n;
 }
 
-void Metal::decreaseCol(int & n)
+void Metal::decreaseCol(int n)
 {
 	this->col -= n;
 }
@@ -31,6 +31,11 @@ void Metal::decreaseCol(int & n)
 Element * Metal::clone() const
 {
 	return new Metal(*this);
+}
+
+int Metal::getCol() const
+{
+	return this->col;
 }
 
 std::vector<std::string> Metal::getIteractions() const
@@ -43,8 +48,17 @@ std::string Metal::getName() const
 	return "Metal";
 }
 
+bool Metal::isBase() const
+{
+	return false;
+}
+
 void Metal::print() const
 {
+	if (col > 0)
+	{
+		std::cout << col << " ";
+	}
 	std::cout << "Metal";
 }
 

@@ -1,6 +1,7 @@
 #ifndef FORMULA_H
 #define FORMULA_H
 #include "Equation.h"
+#include "DividedElement.h"
 
 class Formula
 {
@@ -13,6 +14,11 @@ public:
 	Formula();
 	Formula(std::string dividedElem);
 	Formula(Equation* equation, const std::string& result);
+
+	bool divided()const;
+	Element* getResult()const;
+	Equation* getEquation()const;
+	DividedElement* getDividedElement()const;
 
 	void print()const;
 

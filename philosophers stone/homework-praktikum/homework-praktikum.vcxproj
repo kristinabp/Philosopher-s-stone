@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="Air.cpp" />
     <ClCompile Include="AlchemicalBook.cpp" />
+    <ClCompile Include="Alchemist.cpp" />
     <ClCompile Include="DividedElement.cpp" />
     <ClCompile Include="Earth.cpp" />
     <ClCompile Include="Element.cpp" />

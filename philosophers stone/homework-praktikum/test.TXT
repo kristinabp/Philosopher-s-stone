@@ -4,5 +4,7 @@ Fire+Earth=Metal
 Fire+Water+Earth=Gold
 Water+Earth=Stone
 Spirit+Air=Energy
+Water+Air=Energy
+Gold+Spirit+Energy=Philosopher's Stone
 /Fire
 Energy+Earth=Stone

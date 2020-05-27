@@ -9,15 +9,16 @@ protected:
 
 public:
 	Fire();
-	Fire(const int& col);
+	Fire(int col);
 
-	void decreaseCol(int& n);
-	void increaseCol(int& n);
+	void decreaseCol(int n);
+	void increaseCol(int n);
 	Element* clone()const;
 
-	int getCol();
+	int getCol()const;
 	std::vector<std::string> getIteractions()const;
 	std::string getName()const;
+	bool isBase()const;
 
 
 	void print()const;

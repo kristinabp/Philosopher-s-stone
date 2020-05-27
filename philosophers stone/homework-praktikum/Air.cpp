@@ -8,7 +8,7 @@ Air::Air():Element()
 	iteractions.push_back("Water");
 }
 
-Air::Air(int & col):Element(col)
+Air::Air(int col):Element(col)
 {
 	iteractions.push_back("Air");
 	iteractions.push_back("Earth");
@@ -16,12 +16,12 @@ Air::Air(int & col):Element(col)
 	iteractions.push_back("Water");
 }
 
-void Air::decreaseCol(int & n)
+void Air::decreaseCol(int n)
 {
 	this->col -= n;
 }
 
-void Air::increaseCol(int & n)
+void Air::increaseCol(int n)
 {
 	this->col += n;
 }
@@ -29,6 +29,11 @@ void Air::increaseCol(int & n)
 Element * Air::clone() const
 {
 	return new Air(*this);
+}
+
+int Air::getCol() const
+{
+	return this->col;;
 }
 
 std::vector<std::string> Air::getIteractions() const
@@ -41,8 +46,17 @@ std::string Air::getName() const
 	return "Air";
 }
 
+bool Air::isBase() const
+{
+	return true;
+}
+
 void Air::print() const
 {
+	if (col > 1)
+	{
+		std::cout << col << " ";
+	}
 	std::cout << "Air";
 }
 
